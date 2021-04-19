@@ -1,0 +1,12 @@
+<h1>Add New Product</h1>
+<form [formGroup]="additemFormGroup" (ngSubmit)="addItem()">
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="title" placeholder="Enter the title"><br><br>
+        <input type="text" class="form-control" formControlName="imageUrl" placeholder="Image Url"><br><br>
+        <input type="text" class="form-control" formControlName="description" placeholder="Enter description"><br><br> 
+    </div>
+    <button type="submit" class="btn btn-primary"  [disabled]="!additemFormGroup.valid" >Add Item</button>
+</form>
+
+
+
